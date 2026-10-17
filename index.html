@@ -35,6 +35,10 @@
             margin: 0 auto;
         }
 
+        header {
+            margin-bottom: 35px;
+        }
+
         h1 {
             color: #388bfd;
             font-size: 2.2rem;
@@ -48,45 +52,53 @@
             color: #e6edf3;
         }
 
-        .menu-links {
-            margin-bottom: 35px;
-        }
-
-        .menu-links a {
+        nav a {
             color: #388bfd;
             text-decoration: underline;
             margin-right: 20px;
             font-size: 1rem;
         }
 
-        .card {
+        article {
             background-color: #161b22;
             border: 1px solid #30363d;
             border-radius: 8px;
             padding: 24px;
         }
 
-        .card h2 {
+        article h2 {
             margin-top: 0;
             color: #e6edf3;
             font-size: 1.5rem;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
-        .card p {
+        .post-meta {
+            font-size: 0.85rem;
+            color: #8b949e;
+            margin-bottom: 16px;
+            border-bottom: 1px solid #21262d;
+            padding-bottom: 10px;
+        }
+
+        .post-meta span {
+            margin-right: 12px;
+        }
+
+        article p {
             color: #c9d1d9;
             line-height: 1.5;
             margin-bottom: 15px;
         }
 
-        .card h3 {
+        article h3 {
             color: #e6edf3;
             font-size: 1.1rem;
             margin-top: 20px;
             margin-bottom: 10px;
         }
 
-        .card ul {
+        article ul {
             margin-top: 5px;
             margin-bottom: 20px;
             padding-left: 20px;
@@ -94,11 +106,11 @@
             line-height: 1.6;
         }
 
-        .card li {
+        article li {
             margin-bottom: 4px;
         }
 
-        .card .link-panduan {
+        article .link-panduan {
             color: #8a63d2;
             text-decoration: underline;
         }
@@ -107,16 +119,25 @@
 <body>
 
     <div class="container">
-        <h1>Ayo Coba Yagesya</h1>
-        <p class="subtitle">Coba dulu yagesya, siapa yang tahu percobaan ini bagus.</p>
-        
-        <div class="menu-links">
-            <a href="#">Tentang</a>
-            <a href="#">Kontak</a>
-        </div>
+        <header>
+            <h1>Ayo Coba Yagesya</h1>
+            <p class="subtitle">Coba dulu yagesya, siapa yang tahu percobaan ini bagus.</p>
+            <nav>
+                <a href="#">Tentang</a>
+                <a href="#">Kontak</a>
+            </nav>
+        </header>
 
-        <div class="card">
+        <article>
             <h2>Belajar HTML</h2>
+            
+            <!-- Metadata Penulis & Tanggal (Visual) -->
+            <div class="post-meta">
+                <span>Penulis: <strong>ghencc</strong></span>
+                <span>Diterbitkan: <time datetime="2026-10-17">17 Oktober 2026</time></span>
+                <span>Diperbarui: <time datetime="2026-10-17">17 Oktober 2026</time></span>
+            </div>
+
             <p>HTML dipakai untuk menyusun isi sebuah halaman web.</p>
             
             <h3>Yang sedang kupelajari</h3>
@@ -127,7 +148,7 @@
             </ul>
             
             <p>Ini tautan ke <a href="#" class="link-panduan">panduan HTML</a>.</p>
-        </div>
+        </article>
     </div>
 
 </body>
